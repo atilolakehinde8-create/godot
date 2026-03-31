@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=3 uid="uid://bqhiu3fylj352"]
+
+[ext_resource type="Texture2D" uid="uid://c6gjxq5iue1bg" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Props Items and VFX/Sunnyland items/Sprites/cherry/cherry-1.png" id="1_jx76m"]
+[ext_resource type="Texture2D" uid="uid://bnn7meebrt668" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Props Items and VFX/Sunnyland items/Sprites/cherry/cherry-2.png" id="2_ov1wh"]
+[ext_resource type="Texture2D" uid="uid://cv4djby1al077" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Props Items and VFX/Sunnyland items/Sprites/cherry/cherry-3.png" id="3_syh1m"]
+[ext_resource type="Texture2D" uid="uid://bj7tq0copg6hb" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Props Items and VFX/Sunnyland items/Sprites/cherry/cherry-4.png" id="4_2q0pr"]
+[ext_resource type="Texture2D" uid="uid://c80pxveagyu5q" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Props Items and VFX/Sunnyland items/Sprites/cherry/cherry-5.png" id="5_ad50i"]
+[ext_resource type="Texture2D" uid="uid://h4vuer8qlwur" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Props Items and VFX/Sunnyland items/Sprites/cherry/cherry-6.png" id="6_4oaam"]
+[ext_resource type="Texture2D" uid="uid://bic7s4hipqhnt" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Props Items and VFX/Sunnyland items/Sprites/cherry/cherry-7.png" id="7_tctjt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3iovd"]
+radius = 75.47185
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wxhx2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jx76m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ov1wh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_syh1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2q0pr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ad50i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4oaam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tctjt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="cherry" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3iovd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(9.011904, 8.5)
+sprite_frames = SubResource("SpriteFrames_wxhx2")
+animation = &"idle"
